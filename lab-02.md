@@ -76,19 +76,26 @@ ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
 ### Exercise 2
 ```
 
-``` r
-# insert code here
-```
-
-Réponse à la question…
+le code n’a pas l’air de fonctionne car question 1 est fusionner avec
+question 2? mais sur ma console elle fonctionne très bien \#
+ggplot(plastic_waste, aes(x = plastic_waste_per_cap, color = continent,
+fill = continent)) + geom_density(adjust = 5, alpha = 0.5) + labs( title
+= “Distribution des déchets plastiques par habitant selon le continent”,
+x = “Quantité de déchets plastiques par habitant”, y = “Densité” )
 
 ### Exercise 3
 
 Boxplot:
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x = continent, y = plastic_waste_per_cap)) + geom_boxplot() +
+  labs(x = "Continent", y = "Plastic_waste_per_cap", title = "Distribution des déchets plastiques par habitant selon le continent")
 ```
+
+    ## Warning: Removed 51 rows containing non-finite outside the scale range
+    ## (`stat_boxplot()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-boxplot-1.png)<!-- -->
 
 Violin plot:
 
