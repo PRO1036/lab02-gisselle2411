@@ -63,8 +63,9 @@ le code n'a pas l'air de fonctionne car question 1 est fusionner avec question 2
 Boxplot:
 
 ```{r plastic-waste-boxplot}
-# insert code here
-```
+
+ggplot(plastic_waste, aes(x = continent, y = plastic_waste_per_cap)) + geom_boxplot() +
+  labs(x = "Continent", y = "Plastic_waste_per_cap", title = "Distribution des déchets plastiques par habitant selon le continent")
 
 Violin plot:
 
@@ -72,7 +73,8 @@ Violin plot:
 # insert code here
 ```
 
-Réponse à la question...
+meme chose pour la deuxieme partie de la question 3 ggplot(plastic_waste, aes(x = (x = continent, y = plastic_waste_per_cap)) +
+  geom_violin()
 
 ### Exercise 4
 
