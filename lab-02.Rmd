@@ -101,14 +101,36 @@ la relation semble positive donc linéaire, plus un pays produits de déchets, p
 
 
 ```{r plastic-waste-population-total}
-# insert code here
+ggplot(plastic_waste, aes(x = total_pop, y = plastic_waste_per_cap, color = continent)) +
+  geom_point(alpha = 0.7, size = 3) +
+  scale_x_log10() +
+  scale_color_viridis_d() +
+  labs(
+    title = "Déchets par habitant vs population totale",
+    x = "Population totale",
+    y = "Déchets plastiques par habitant (kg/jour)",
+    color = "Continent"
+  ) +
+  theme_minimal()
+
 ```
 
 ```{r plastic-waste-population-coastal}
-# insert code here
+ggplot(plastic_waste, aes(x = coastal_pop, y = plastic_waste_per_cap, color = continent)) +
+  geom_point(alpha = 0.7, size = 3) +
+  scale_x_log10() +
+  scale_color_viridis_d() +
+  labs(
+    title = "Déchets par habitant vs population côtière",
+    x = "Population vivant près de la côte",
+    y = "Déchets plastiques par habitant (kg/jour)",
+    color = "Continent"
+  ) +
+  theme_minimal()
+
 ```
 
-Réponse à la question...
+les pays avec beaucoup de population côtière tendent à générer plus de déchets non gérés ou plus de déchets plastiques à proximité de la mer.
 
 ## Conclusion
 
