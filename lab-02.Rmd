@@ -67,10 +67,8 @@ Boxplot:
 ggplot(plastic_waste, aes(x = continent, y = plastic_waste_per_cap)) + geom_boxplot() +
   labs(x = "Continent", y = "Plastic_waste_per_cap", title = "Distribution des déchets plastiques par habitant selon le continent")
 
-Violin plot:
 
-```{r plastic-waste-violin}
-# insert code here
+
 ```
 
 meme chose pour la deuxieme partie de la question 3 ggplot(plastic_waste, aes(x = (x = continent, y = plastic_waste_per_cap)) +
@@ -97,7 +95,7 @@ ggplot(
 
 ```
 
-Réponse à la question...
+la relation semble positive donc linéaire, plus un pays produits de déchets, plus il y a de déchets non gérés. En amerique du Nord et europe il y a beaucoup de déchets par personne mais plus bien géré qu'en Afrique et Asie. 
 
 ### Exercise 5
 
