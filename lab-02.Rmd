@@ -47,7 +47,13 @@ ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
 ### Exercise 2
 
 ```{r plastic-waste-density}
-# insert code here
+# ggplot(plastic_waste, aes(x = plastic_waste_per_cap, color = continent, fill = continent)) +
+  geom_density(adjust = 5, alpha = 0.5) + 
+  labs(
+    title = "Distribution des déchets plastiques par habitant selon le continent",
+    x = "Quantité de déchets plastiques par habitant",
+    y = "Densité"
+  )
 ```
 
 Réponse à la question...
