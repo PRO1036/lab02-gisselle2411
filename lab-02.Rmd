@@ -80,7 +80,21 @@ meme chose pour la deuxieme partie de la question 3 ggplot(plastic_waste, aes(x 
 
 
 ```{r plastic-waste-mismanaged}
-# insert code here
+
+ggplot(
+  plastic_waste, 
+  aes(x = plastic_waste_per_cap, 
+      y = mismanaged_plastic_waste_per_cap, 
+      color = continent)) +
+  geom_point(size = 3, alpha = 0.7) + 
+  labs(
+    title = "Relation entre déchets totaux et déchets non gérés",
+    x = "Déchets plastiques par personne (kg/jour)",
+    y = "Déchets plastiques non gérés par personne (kg/jour)",
+    color = "Continent"
+  ) +
+  theme_minimal()
+
 ```
 
 Réponse à la question...
