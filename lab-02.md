@@ -37,26 +37,44 @@ Commençons par filtrer les données pour retirer le point représenté par
 Trinité et Tobago (TTO) qui est un outlier.
 
 ``` r
-plastic_waste %>%
-  filter(plastic_waste_per_cap > 3.5)
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.1, fill = "grey", color = "black") +
+  facet_wrap(~ continent) +
+  labs(
+    title = "Distribution des déchets plastiques par habitant selon le continent",
+    x = "Quantité de déchets plastiques par habitant",
+    y = "Nombre de pays"
+  )
 ```
 
-    ## # A tibble: 1 × 10
-    ##   code  entity              continent     year gdp_per_cap plastic_waste_per_cap
-    ##   <chr> <chr>               <chr>        <dbl>       <dbl>                 <dbl>
-    ## 1 TTO   Trinidad and Tobago North Ameri…  2010      31261.                   3.6
-    ## # ℹ 4 more variables: mismanaged_plastic_waste_per_cap <dbl>,
-    ## #   mismanaged_plastic_waste <dbl>, coastal_pop <dbl>, total_pop <dbl>
+    ## Warning: Removed 51 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](lab-02_files/figure-gfm/filter-data-1.png)<!-- -->
 
 ## Exercices
 
 ### Exercise 1
 
 ``` r
-# insert code here
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.1, fill = "grey", color = "black") +
+  facet_wrap(~ continent) +
+  labs(
+    title = "Distribution des déchets plastiques par habitant selon le continent",
+    x = "Quantité de déchets plastiques par habitant",
+    y = "Nombre de pays"
+  )
 ```
 
+    ## Warning: Removed 51 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-continent-1.png)<!-- -->
+
+``` r
 ### Exercise 2
+```
 
 ``` r
 # insert code here
