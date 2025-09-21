@@ -37,9 +37,16 @@ Commençons par filtrer les données pour retirer le point représenté par
 Trinité et Tobago (TTO) qui est un outlier.
 
 ``` r
-plastic_waste <- plastic_waste %>%
-  filter(plastic_waste_per_cap < 3.5)
+plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
 ```
+
+    ## # A tibble: 1 × 10
+    ##   code  entity              continent     year gdp_per_cap plastic_waste_per_cap
+    ##   <chr> <chr>               <chr>        <dbl>       <dbl>                 <dbl>
+    ## 1 TTO   Trinidad and Tobago North Ameri…  2010      31261.                   3.6
+    ## # ℹ 4 more variables: mismanaged_plastic_waste_per_cap <dbl>,
+    ## #   mismanaged_plastic_waste <dbl>, coastal_pop <dbl>, total_pop <dbl>
 
 ## Exercices
 
