@@ -47,16 +47,16 @@ ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
 ### Exercise 2
 
 ```{r plastic-waste-density}
-# ggplot(plastic_waste, aes(x = plastic_waste_per_cap, color = continent, fill = continent)) +
+
+```
+
+le code n'a pas l'air de fonctionne car question 1 est fusionner avec question 2? mais sur ma console elle fonctionne très bien # ggplot(plastic_waste, aes(x = plastic_waste_per_cap, color = continent, fill = continent)) +
   geom_density(adjust = 5, alpha = 0.5) + 
   labs(
     title = "Distribution des déchets plastiques par habitant selon le continent",
     x = "Quantité de déchets plastiques par habitant",
     y = "Densité"
   )
-```
-
-Réponse à la question...
 
 ### Exercise 3
 
